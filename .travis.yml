@@ -9,6 +9,7 @@ before_install:
 - npm cache clean --force
 
 install:
+- npm install -g node
 - npm i -g nativescript --ignore-scripts
 - npm i
 - tns run android
