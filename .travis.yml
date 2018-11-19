@@ -14,4 +14,5 @@ install:
 - npm i -g nativescript-cloud
 - npm i
 - tns run android --menu "Choose one of the following options:" "Option 3"
+- select opt in Option 3
 - tns build android --copy-to .
