@@ -1,7 +1,3 @@
-sudo: false
-language: node_js
-node_js: "8"
-
 android:
   components:
   - tools
@@ -10,19 +6,36 @@ android:
   - android-26
   - extra-android-m2repository
   - sys-img-armeabi-v7a-android-21
-  - extra
-
-before_install:
-- echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
-- emulator -avd test -no-audio -no-window &
-- android-wait-for-emulator
-- adb shell input keyevent 82 &
-- rm -rf node_modules
-- npm cache clean --force
-
 
 install:
+- npm install -g nativescript --ignore-script
+- tns usage-reporting disable
+- tns error-reporting disable
+- npm install --ignore-script
 
-- npm i --ignore-script
-- npm run run-android
-- npm run build-android
+
+script:
+
+matrix:
+  include:
+  - stage: "Lint"
+    language: node_js
+    os: linux
+    node_js: "8"
+    script: "npm run ci.tslint"
+  - stage: "WebPack"
+    os: linux
+    env:
+    - Webpack="Android"
+    jdk: oraclejdk8
+    before_install: nvm install 8.12.0
+    script: tns run android && tns build android --bundle
+  - stage: "Build"
+    env:
+    - BuildAndroid="25"
+    language: android
+    os: linux
+    jdk: oraclejdk8
+    before_install: nvm install 8.12.0
+    script:
+    - tns run android && tns build android
