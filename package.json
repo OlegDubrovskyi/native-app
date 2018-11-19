@@ -13,9 +13,9 @@
   "repository": "<fill-your-repository-here>",
   "scripts": {
     "lint": "tslint \"src/**/*.ts\"",
-    "run-android" : "tns run android",
-    "build-android" : "tns build android --copy-to .",
-    "cloud-setup": "tns cloud setup"
+    "run-android": "tns run android --justlaunch",
+    "build-android": "tns build android --copy-to .",
+    "cloud-setup": "tns cloud setup --justlaunch"
   },
   "dependencies": {
     "@angular/animations": "~7.0.0",
