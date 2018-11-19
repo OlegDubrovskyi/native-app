@@ -13,7 +13,7 @@
   "repository": "<fill-your-repository-here>",
   "scripts": {
     "lint": "tslint \"src/**/*.ts\"",
-    "run-android" : "tns run android --no-watch",
+    "run-android" : "tns run android",
     "build-android" : "tns build android --copy-to ."
   },
   "dependencies": {
