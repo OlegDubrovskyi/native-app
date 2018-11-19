@@ -5,14 +5,9 @@ node_js: "8"
 before_install:
 
 - rm -rf node_modules
-- npm uninstall -g nativescript --ignore-scripts
 - npm cache clean --force
 
 install:
-
-- npm i -g nativescript --ignore-scripts
-- npm i -g nativescript-cloud
 - npm i
-- tns run android
-- select opt in Option 3
-- tns build android --copy-to .
+- npm run run-android
+- npm run build-android

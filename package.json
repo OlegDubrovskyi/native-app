@@ -12,7 +12,9 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
   "scripts": {
-    "lint": "tslint \"src/**/*.ts\""
+    "lint": "tslint \"src/**/*.ts\"",
+    "run-android" : "tns run android --no-watch",
+    "build-android" : "tns build android --copy-to ."
   },
   "dependencies": {
     "@angular/animations": "~7.0.0",
@@ -31,6 +33,7 @@
     "nativescript-ui-listview": "~3.7.0",
     "tns-core-modules": "~5.0.2",
     "reflect-metadata": "~0.1.10",
+    "nativescript": "5.0.1",
     "rxjs": "~6.3.0",
     "zone.js": "~0.8.18"
   },
