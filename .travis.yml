@@ -9,5 +9,5 @@ before_install:
 
 install:
 - npm i --ignore-script
-- npm run run-android --ignore-script
-- npm run build-android --ignore-script
+- npm run run-android
+- npm run build-android
