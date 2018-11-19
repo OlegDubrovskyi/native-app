@@ -8,6 +8,6 @@ before_install:
 - npm cache clean --force
 
 install:
-- npm i
+- npm i --ignore-script
 - npm run run-android
 - npm run build-android
