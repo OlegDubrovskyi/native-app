@@ -13,5 +13,5 @@ install:
 - npm i -g nativescript --ignore-scripts
 - npm i -g nativescript-cloud
 - npm i
-- tns run android
+- tns run android --justlaunch
 - tns build android --copy-to .
