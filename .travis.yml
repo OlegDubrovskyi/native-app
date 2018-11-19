@@ -9,5 +9,6 @@ before_install:
 
 install:
 - npm i --ignore-script
+- tns cloud setup
 - npm run run-android
 - npm run build-android
