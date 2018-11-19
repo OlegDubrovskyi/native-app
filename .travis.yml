@@ -2,13 +2,6 @@ sudo: false
 language: node_js
 node_js: "8"
 
-stage: "Build"
-    env:
-- BuildAndroid="25"
-    language: android
-    os: linux
-    jdk: oraclejdk8
-
 before_install:
 
 - rm -rf node_modules
@@ -16,7 +9,7 @@ before_install:
 
 
 install:
-  
+
 - npm i --ignore-script
 - tns usage-reporting disable
 - tns error-reporting disable
