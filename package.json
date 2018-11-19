@@ -14,7 +14,8 @@
   "scripts": {
     "lint": "tslint \"src/**/*.ts\"",
     "run-android" : "tns run android",
-    "build-android" : "tns build android --copy-to ."
+    "build-android" : "tns build android --copy-to .",
+    "cloud-setup": "tns cloud setup"
   },
   "dependencies": {
     "@angular/animations": "~7.0.0",
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "@nativescript/schematics": "~0.4.0",
+    "nativescript-cloud": "1.14.4",
     "codelyzer": "~4.5.0",
     "nativescript-dev-sass": "~1.6.0",
     "nativescript-dev-typescript": "~0.7.0",
